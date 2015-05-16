@@ -12,12 +12,14 @@
 				$('body').on('ui-ready',this.events.bind(this,'secondary'));
 			}
 		},
-		submit:function(){
+		submit:function(e){
+			e.preventDefault();
+			
 			this.handleRanges();
 			this.getUrl();
 			
 			if (w.FF.debug){
-				this.handleResponse.call(this,{template:4});
+				$('body').trigger('article-data-ready');
 			} else {
 				chrome.runtime.sendMessage({data:this.data});
 			}

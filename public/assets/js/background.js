@@ -14,6 +14,7 @@
 					xmlhttp.onreadystatechange = function() {
 						if (xmlhttp.readyState == 4) {
 							chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+								console.dir(tabs);
 								chrome.tabs.sendMessage(tabs[0].id, {article:xmlhttp.responseText});
 							});
 					    }

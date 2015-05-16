@@ -108,8 +108,10 @@
 	 * Global\animations
 	 * ==============================
 	 */ }
+  [id^="FF"] h1, [id^="FF"] h2, [id^="FF"] li, [id^="FF"] p, [id^="FF"] a {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; }
   [id^="FF"] a, [id^="FF"] .btn {
-    color: #ffffff;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
     outline: none; }
@@ -138,7 +140,7 @@
       font-size: 1.3em; }
     [id^="FF"] .btn:hover {
       background-color: #7b1524;
-      color: #ffffff; }
+      color: #fefefe; }
   [id^="FF"] p {
     text-transform: uppercase;
     font-weight: 700; }
@@ -223,7 +225,7 @@
     min-width: 130px;
     background-color: #aa1f25;
     transition: background-color 300ms linear 0s;
-    color: #ffffff;
+    color: #fefefe;
     line-height: 35px;
     text-transform: uppercase; }
     [id^="FF"] input[type="submit"]:hover {
@@ -317,6 +319,51 @@ html, body {
 
 input[type="range"]:focus + .rangeslider .rangeslider__handle {
   box-shadow: 0 0 8px rgba(255, 0, 255, 0.9); }
+
+#FF_Article {
+  font-size: 18px;
+  line-height: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9998;
+  padding: 20px; }
+  #FF_Article img {
+    margin: 2em 0; }
+
+#FF__header {
+  background: #f87849;
+  padding: 1em; }
+  #FF__header img {
+    margin: 0.5em 0; }
+  #FF__header h1.title {
+    padding: 1em;
+    border: 1px solid #f87849;
+    color: #f87849; }
+  #FF__header hr {
+    border-color: #f87849; }
+
+#FF__body {
+  margin: auto;
+  max-width: 900px;
+  height: 100%;
+  overflow: auto;
+  background: teal; }
+
+.FF__logo {
+  width: 284px;
+  height: 36px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url('../img/logo-simple.png'); }
+
+.FF__footer {
+  padding: 1em;
+  background: #eee;
+  text-align: center; }
 
 #FF_Article.template-a {
   color: gold; }

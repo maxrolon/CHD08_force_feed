@@ -24,7 +24,7 @@
 			}
 		},
 		button:function(request, sender, sendResponse){
-			if (request.article){
+			if (request && request.article){
 				$('body').trigger('article-data-ready',[request.article]);
 				return;
 			}

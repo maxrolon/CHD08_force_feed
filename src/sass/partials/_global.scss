@@ -1,4 +1,8 @@
 [id^="FF"]{
+	
+	h1, h2, li, p, a {
+		font-family:$font-family-base;
+	}
 
 	a, .btn{
 		color:$link-color;

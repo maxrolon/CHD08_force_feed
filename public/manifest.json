@@ -16,7 +16,10 @@
   },
   "web_accessible_resources": [
   	"assets/js/main.js.map",
-  	"templates/ui.html"
+  	"templates/ui.html",
+  	"templates/template-a.html",
+  	"templates/template-b.html",
+  	"assets/img/logo.png"
   ],
   "content_scripts": [
     {
