@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'Garage Gothic';
+	src: url('../fonts/GG_regular/GarageGothic-Regular-webfont.eot');
+	src: url('../fonts/GG_regular/GarageGothic-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/GG_regular/GarageGothic-Regular-webfont.woff2') format('woff2'),
+		 url('../fonts/GG_regular/GarageGothic-Regular-webfont.woff') format('woff'),
+		 url('../fonts/GG_regular/GarageGothic-Regular-webfont.ttf') format('truetype'),
+		 url('../fonts/GG_regular/GarageGothic-Regular-webfont.svg#garagegothicregular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Garage Gothic';
+	src: url('../fonts/GG_bold/GarageGothic-Bold-webfont.eot');
+	src: url('../fonts/GG_bold/GarageGothic-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('../fonts/GG_bold/GarageGothic-Bold-webfont.woff2') format('woff2'),
+	 url('../fonts/GG_bold/GarageGothic-Bold-webfont.woff') format('woff'),
+	 url('../fonts/GG_bold/GarageGothic-Bold-webfont.ttf') format('truetype'),
+	 url('../fonts/GG_bold/GarageGothic-Bold-webfont.svg#garagegothicbold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'longhorn';
+	src: url('../fonts/Icons/longhorn.eot?53114353');
+	src: url('../fonts/Icons/longhorn.eot?53114353#iefix') format('embedded-opentype'),
+			 url('../fonts/Icons/longhorn.woff?53114353') format('woff'),
+			 url('../fonts/Icons/longhorn.ttf?53114353') format('truetype'),
+			 url('../fonts/Icons/longhorn.svg?53114353#longhorn') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before, .psuedo:before{
+	font-family: "longhorn";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+ 
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	/* opacity: .8; */
+ 
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+		 
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+ 
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
+ 
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120%; */
+ 
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+//.icon-facebook:before { content: '\e800'; } /* '' */
+//.icon-facebook-1:before { content: '\e801'; } /* '' */
+.icon-right-open-big:before { content: '\e800'; } /* '' */
+.icon-play-2:before { content: '\e801'; } /* '' */
+.icon-right-open-big-1:before { content: '\e802'; } /* '' */
+.icon-left-open-big:before { content: '\e803'; } /* '' */
+.icon-down-open-big:before { content: '\e804'; } /* '' */
+.icon-up-open-big:before { content: '\e805'; } /* '' */
+.icon-menu:before { content: '\e806'; } /* '' */
+.icon-twitter:before { content: '\e807'; } /* '' */
+.icon-cancel:before { content: '\e808'; } /* '' */

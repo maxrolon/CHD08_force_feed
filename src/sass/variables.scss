@@ -1,0 +1,186 @@
+$cdn-url:'https://ba60722a445e929e3792-222278aea88cddfd56d8690836dddbcb.ssl.cf2.rackcdn.com/';
+
+/**
+ *
+ * Colors
+ *
+ */
+
+$black: #000;
+$white: #ffffff;
+$yellow: #f8ead1;
+$red:#aa1f25;
+$blue-twitter: #5ea9dd;
+$blue-fb: #3664a2;
+$grey:#898989;
+$grey-dk:#353535;
+
+$body-bg: $black;
+$text-color: $white;
+$link-color: $text-color;
+$link-bg:$red;
+$link-bg-hover:darken(#BC2035,15%);
+
+$a-duration:300ms;
+$a-easing:linear;
+
+/**
+ *
+ * Typography
+ *
+ */
+
+$font-family-base: 'Garage Gothic', Helvetica, Arial, sans-serif;
+$type-secondary: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+
+
+/**
+ * ===============================================
+ * Font sizes
+ * ===============================================
+ */
+
+/*
+ * Usage
+ * =====	
+ * Sad Lunch Caption
+ * Carousel Paragraph
+ * Footer copyright
+ * 
+ */
+$font-size-base: 27px;
+$line-height-base: 34px;
+$type-weight-base: 400;
+
+@function em($px, $base: $font-size-base) {
+		@return ($px / $base) * 1em;
+}
+
+/*
+ * Usage
+ * =====	
+ * Header links
+ * 
+ */
+$font-size-header:em(28px);
+$line-height-header: 0.9;
+
+/*
+ * Usage
+ * =====	
+ * Carousel title "Upgrade"
+ * 
+ */
+$font-size-h1:em(45px); 
+$line-height-h1: 1.4; 
+
+/*
+ * Usage
+ * =====	
+ * "Vote Now and Enter"
+ * 
+ */
+$font-size-h2:em(77px); 
+$line-height-h2: 1; 
+
+$font-size-h2-2: 84px; 
+$line-height-h2-2: 1.9;
+
+/*
+ * Usage
+ * =====	
+ * Vote Section: Header H3
+ * Lunch Section: Header H3 
+ * 
+ */
+$font-size-h3:em(32px);
+$line-height-h3: 1.4;
+
+/*
+ * Usage
+ * =====	
+ * Sad Lunch title
+ * 
+ */
+$font-size-h4:em(70px); 
+$line-height-h4: 1.2; 
+
+/*
+ * Usage
+ * =====	
+ * Carousel T&C
+ * How it works numbers
+ * 
+ */
+$font-size-h6:em(24px);
+$line-height-h6: 1.3;
+
+/*
+ * Usage
+ * =====	
+ * "Cast Your Vote!"
+ * Brandon buttons
+ * 
+ */
+$font-size-span-1:em(14px);
+$line-height-span-1: 1.3;
+
+/*
+ * Usage
+ * =====	
+ * Carousel indicators
+ * 
+ */
+$font-size-span-2:em(19px);
+$line-height-span-2: 19px;
+
+/**
+ *
+ * Grid Variables
+ *
+ */
+
+// Mobile
+$screen-xs:                  600px;
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+
+// Tablet
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+$screen-md:                  965px;
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+$screen-lg:                  1230px;
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+
+//== Grid system
+//
+$grid-columns:              12;
+$grid-gutter-width:         15px;
+$grid-float-breakpoint:     $screen-sm-min;
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+
+//== Container sizes
+
+$container-tablet:             ((720px + $grid-gutter-width));
+$container-sm:                 $container-tablet;
+
+$container-desktop:            ((940px + $grid-gutter-width));
+$container-md:                 $container-desktop;
+
+$container-large-desktop:      ((1020px + $grid-gutter-width));
+$container-lg:                 $container-large-desktop;
