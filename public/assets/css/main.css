@@ -124,7 +124,7 @@
     border: 0; }
   [id^="FF"] .btn {
     display: inline-block;
-    font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 0.5185185185em;
     background: #aa1f25;
     padding: 12px 60px 8px;
@@ -202,7 +202,7 @@
     -webkit-appearance: none;
     border-radius: 0; }
   [id^="FF"] input[type="text"], [id^="FF"] input[type="email"], [id^="FF"] input[type="submit"] {
-    font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 0.5185185185em;
     font-weight: 700;
     height: 40px;
@@ -317,5 +317,11 @@ html, body {
 
 input[type="range"]:focus + .rangeslider .rangeslider__handle {
   box-shadow: 0 0 8px rgba(255, 0, 255, 0.9); }
+
+#FF_Article.template-a {
+  color: gold; }
+
+#FF_Article.template-b {
+  color: gold; }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,7 +7,7 @@
 			$('body').on('article-data-ready',this.prepare.bind(this));
 		},
 		prepare:function(e,d){
-			console.dir(d);
+			//d =
 			this.data = d;
 			this.type = t = Number(d.template) <= 2 ? 'a' : 'b';
 			
