@@ -1,461 +1,161 @@
-html, body, .wrapper, main{width:100%;position: relative}
+[id^="FF"]{
 
-body{
-	position: relative;
-	//background-image: url('../img/image.png');
-	background-position: center center;
-	background-size: cover;
-	background-color:$body-bg;
-	color:$text-color;
-	overflow:auto;
-	-webkit-overflow-scrolling: touch;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	font-weight: $type-weight-base;
-	line-height: $line-height-base;
-	letter-spacing: 0.015em;
-	box-sizing: border-box;
-	@include font-smoothing(true);
-}
-
-.body-wrap{padding-top: 100px}
-
-img{
-	width: 100%;
-	height:auto;
-}
-
-figure{
-	margin: 0;
-	padding: 0;
-}
-
-@media(max-width:$screen-md){
-	.body-wrap{padding-top: 70px}
-}
-
-@media(max-width:$screen-xs){
-	$font-subtraction:6px;
-	
-	body{
-		font-size: ($font-size-base - $font-subtraction);
-		line-height: ($line-height-base - $font-subtraction);
-	}
-}
-
-/**
- * ===============================================
- * Lazy loading img
- * ===============================================
- */
-div[data-src],img[data-src]{
-	opacity: 0;
-	transition: opacity 0.2s linear;	
-	
-	&.visible{opacity: 1}
-}
-
-
-/**
- * ===============================================
- * Grid stuff
- * ===============================================
- */
-.clearfix{
-	@include clearfix();
-}
-
-/**
- * ===============================================
- * Icons
- * ===============================================
- */
-[class^="icon-"]{transition: color $a-duration $a-easing 0s}
-
-/**
- * ===============================================
- * Containers
- * ===============================================
- */
-section{
-	width: 100%;
-	padding-top: 1px;
-	margin-top: -1px;
-	text-align: center;
-	box-sizing: border-box;
-}
-
-section header{
-	background-color:$yellow;
-	padding: 35px 0 33px;
-	
-	h2,h3{color:$black}
-	
-	h3{margin-top: -10px}
-}
-
-@media(max-width:$screen-xs){
-	section.gutter{
-		padding-left: $grid-gutter-width;
-		padding-right: $grid-gutter-width;
-	}
-
-	section header{
-		padding: 30px 0;
-	}
-}
-
-[class^="overflow-"]{
-	position: relative;
-	overflow: hidden;
-}
-.overflow-1{
-	max-height: 840px;
-}
- 
-/**
- * ==============================
- * Link styles
- * ==============================
- */
-a, .btn{
-	color:$link-color;
-	text-decoration: none;
-	cursor: pointer;
-	outline: none;
-}
-
-a{
-	transition: color $a-duration $a-easing 0s;
-	
-	&:hover{color:$red}
-}
-
-a:focus, a:active, a:visited {outline:none;text-decoration: none}
-::-moz-focus-inner {border:0;}
-
-.btn{
-	display: inline-block;
-	font-family: $type-secondary;
-	font-size: $font-size-span-1;
-	background: $link-bg;
-	padding: 12px 60px 8px;
-	text-transform: uppercase;
-	transition: background-color $a-duration $a-easing 0s;
-	
-	i{
-		position: relative;
-		top:1px;
-		padding: 0 0 0 10px;
-		margin: 0px;
-		font-size: 1.3em;
-	}
-	
-	&:hover{
-		background-color:$link-bg-hover;
-		color:$white;
-	}
-}
-
-.btn-double{
-	position: relative;
-	padding:0;
-	overflow: hidden;
-	display: block;
-	max-width: 265px;
-	margin-left: auto;
-	margin-right: auto; 
-	
-	.inner{
-		position: relative;
-		transform: translateY(0);
-		transition: 
-			transform 0.4s $a-easing 0s,
-			background-color $a-duration $a-easing 0s;
-	}
-	
-	&.state-2 .inner{
-		transform: translateY(-100%);
-	}
-	
-	span{
-		display: block;
-		padding: 12px 60px 8px;
+	a, .btn{
+		color:$link-color;
+		text-decoration: none;
 		cursor: pointer;
-		background: $red;
-		transition: 
-			top $a-duration $a-easing 0s,
-			background-color $a-duration $a-easing 0s;
+		outline: none;
+	}
+	
+	a{
+		transition: color $a-duration $a-easing 0s;
+		
+		&:hover{color:$red}
+	}
+	
+	a:focus, a:active, a:visited {outline:none;text-decoration: none}
+	::-moz-focus-inner {border:0;}
+	
+	.btn{
+		display: inline-block;
+		font-family: $type-secondary;
+		font-size: $font-size-span-1;
+		background: $link-bg;
+		padding: 12px 60px 8px;
+		text-transform: uppercase;
+		transition: background-color $a-duration $a-easing 0s;
+		
+		i{
+			position: relative;
+			top:1px;
+			padding: 0 0 0 10px;
+			margin: 0px;
+			font-size: 1.3em;
+		}
 		
 		&:hover{
 			background-color:$link-bg-hover;
+			color:$white;
 		}
 	}
-
-	span:last-child{
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top:100%;
-		left: 0;
-		box-sizing: border-box;
-	}
-}
-
-.touch .btn-double{
-	.inner{
-		transform: translateY(0) !important;
-		transition: background-color $a-duration $a-easing 0s;
+	
+	/**
+	 * ==============================
+	 * Typography
+	 * ==============================
+	 */
+	p{text-transform: uppercase;font-weight: 700}
+	
+	ul,li{padding: 0px;margin: 0px;list-style-type: none;}
+	
+	h1{font-size: $font-size-h1;line-height:$line-height-h1;text-transform: uppercase;font-weight:700;letter-spacing: 0.1em}
+	h2{font-size: $font-size-h2;line-height:$line-height-h2;text-transform: uppercase;font-weight: 700;letter-spacing: 0.01em}
+	h3{font-size: $font-size-h3;line-height:$line-height-h3;font-weight: 400;}
+	h4{font-size: $font-size-h4;line-height:$line-height-h4;text-transform: uppercase}
+	h6{font-size: $font-size-h6;line-height:$line-height-h6;font-weight: 100;}
+	
+	@media(max-width:$screen-xs){
+		$font-subtraction:0.1em;
+		
+		h3{
+			font-size: ($font-size-h3 - $font-subtraction);
+			line-height: ($line-height-h3 - $font-subtraction);
+		}
 	}
 	
-	&.state-2 span:last-child{
-		top:0
-	}
-}
-
-/**
- * ===============================================
- * Menu Styles (Mobile menu and header menus)
- * ===============================================
- */
- .menu-styles{
-	 nav a{
-		display: block;
-		color:$black;
+	/**
+	 * ==============================
+	 * Margins
+	 * ==============================
+	 */
+	h1{margin-top: 0;margin-bottom: 0}
+	h2{margin-top: 0;margin-bottom: 0}
+	h3{margin-top: 0;margin-bottom: 0}
+	h4{margin-top: 0;margin-bottom: 0}
+	h6{margin-top: 0;margin-bottom: 0}
+	
+	/**
+	 * ==============================
+	 * Carousel stuff
+	 * ==============================
+	 */
+	a[class^="arrow-"]{
+		position: absolute;
+		font-size: 2em;
 		transition: color $a-duration $a-easing 0s;
-		text-transform: uppercase;
+		
+		&:hover{color:$red}
+	}
+	
+	/**
+	 * ==============================
+	 * Forms
+	 * ==============================
+	 */
+	input{
+		border: none;
+		outline: none;
+		padding: 0;
+		-webkit-appearance: none;
+		border-radius: 0;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="submit"]{
+		font-family:$type-secondary;
+		font-size:$font-size-span-1;
 		font-weight: 700;
+		height: 40px;
+		line-height: 40px;
+		color:$grey;
 		
-		&:hover{color:$red !important}
+		&::input-placeholder{text-transform: uppercase;}
+		&:-ms-input-placeholder{text-transform: uppercase;}
+		&::-moz-placeholder{text-transform: uppercase;}
+		&::-webkit-input-placeholder{text-transform: uppercase}
 	}
-}
-
-/**
- * ==============================
- * Typography
- * ==============================
- */
-p{text-transform: uppercase;font-weight: 700}
-
-ul,li{padding: 0px;margin: 0px;list-style-type: none;}
-
-h1{font-size: $font-size-h1;line-height:$line-height-h1;text-transform: uppercase;font-weight:700;letter-spacing: 0.1em}
-h2{font-size: $font-size-h2;line-height:$line-height-h2;text-transform: uppercase;font-weight: 700;letter-spacing: 0.01em}
-h3{font-size: $font-size-h3;line-height:$line-height-h3;font-weight: 400;}
-h4{font-size: $font-size-h4;line-height:$line-height-h4;text-transform: uppercase}
-h6{font-size: $font-size-h6;line-height:$line-height-h6;font-weight: 100;}
-
-@media(max-width:$screen-xs){
-	$font-subtraction:0.1em;
 	
-	h3{
-		font-size: ($font-size-h3 - $font-subtraction);
-		line-height: ($line-height-h3 - $font-subtraction);
+	input[type="text"],
+	input[type="email"]{
+		min-width: 200px;
+		text-indent: 10px;
 	}
-}
-
-/**
- * ==============================
- * Margins
- * ==============================
- */
-h1{margin-top: 0;margin-bottom: 0}
-h2{margin-top: 0;margin-bottom: 0}
-h3{margin-top: 0;margin-bottom: 0}
-h4{margin-top: 0;margin-bottom: 0}
-h6{margin-top: 0;margin-bottom: 0}
-
-/**
- * ==============================
- * Carousel stuff
- * ==============================
- */
-a[class^="arrow-"]{
-	position: absolute;
-	font-size: 2em;
-	transition: color $a-duration $a-easing 0s;
 	
-	&:hover{color:$red}
-}
-
-/**
- * ==============================
- * Forms
- * ==============================
- */
-input{
-	border: none;
-	outline: none;
-	padding: 0;
-	-webkit-appearance: none;
-	border-radius: 0;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="submit"]{
-	font-family:$type-secondary;
-	font-size:$font-size-span-1;
-	font-weight: 700;
-	height: 40px;
-	line-height: 40px;
-	color:$grey;
-	
-	&::input-placeholder{text-transform: uppercase;}
-	&:-ms-input-placeholder{text-transform: uppercase;}
-	&::-moz-placeholder{text-transform: uppercase;}
-	&::-webkit-input-placeholder{text-transform: uppercase}
-}
-
-input[type="text"],
-input[type="email"]{
-	min-width: 200px;
-	text-indent: 10px;
-}
-
-input[type="submit"]{
-	min-width: 130px;
-	background-color: $red;
-	transition: background-color $a-duration $a-easing 0s;
-	color:$white;
-	line-height: 35px;
-	text-transform: uppercase;
-	
-	&:hover{background-color:$link-bg-hover}
-}
-
-//Psuedo checkboxes
-.psuedo{
-	width: 17px;
-	height: 17px;
-	background-color: $white;
-	display: inline-block;
-	position: relative;
-	margin-right: 10px;
-	cursor: pointer;
-
-	&:before{
-		content: '\e808';
-		width: 100%;
-		height: 100%;
+	input[type="submit"]{
+		min-width: 130px;
+		background-color: $red;
+		transition: background-color $a-duration $a-easing 0s;
 		color:$white;
-		position: absolute;
-		top: 0;
-		left: 0;
-		margin: 0;
-		font-style: normal;
-		font-size: 0.7em;
-		line-height: 1.1em;
-		transition: color $a-duration $a-easing 0s;
-	}
-}
-
-.psuedo.checked:before{
-	color:$red;
-}
-
-@media(max-width:$screen-xs){
-	.psuedo:before{
-		line-height: 1.2em;
-	}
-}
-
-/**
- * ===============================================
- * Terms page
- * ===============================================
- */
-.terms{
-	//background: $white;
-	
-	.wrapper{
-		margin: 50px auto 50px;
-		max-width: 650px;
-		padding: 0 $grid-gutter-width;
-		font-size: 19px;
-		line-height: 23px;
-		box-sizing: border-box;
-	
-		a{color:$red}
+		line-height: 35px;
+		text-transform: uppercase;
 		
-		p,b{
-			text-transform: none;
-			//color:$black;
-		}
-	
-	}
-}
-
-/**
- * ===============================================
- * Social
- * ===============================================
- */
-.icon-facebook{
-	height: 40px;
-	display: inline-block;
-	position: relative;
-	top:7px;
-	margin-right: 10px;
-	transition: opacity $a-duration $a-easing 0s;
-	
-	&:hover{opacity: 0.8}
-}
-
-.icon-twitter{
-	color:$blue-twitter;
-	position: relative;
-	top:4px;
-	font-size: 1.6em;
-	
-	&:hover{color:darken($blue-twitter,20%)}
-}
-
-@media(max-width:$screen-md){
-	.icon-facebook{
-		transform: scale(0.9);
-		transform-origin: center left;
+		&:hover{background-color:$link-bg-hover}
 	}
 	
-	.icon-twitter{
-		top:2px;
-		font-size: 40px;
-	}
-}
-
-
-
-/**
- * ==============================
- * Misc additions
- * ==============================
- */
-
-::-moz-selection { 
-    background: $red;
-}
-
-::selection {
-    background: $red;
-}
-
-/**
- * ==============================
- * Global\animations
- * ==============================
- */
-.cssanimations{
-	//.class{transition: property duration ease-in delay}
+	/**
+	 * ==============================
+	 * Misc additions
+	 * ==============================
+	 */
 	
-	//.modal{transition: opacity 0.3s ease-in 0.3s, visibility 0.1s ease-in 0s, max-height 0.01s 0s}
+	::-moz-selection { 
+	    background: $red;
+	}
+	
+	::selection {
+	    background: $red;
+	}
+	
+	/**
+	 * ==============================
+	 * Global\animations
+	 * ==============================
+	 */
+	.cssanimations{
+		//.class{transition: property duration ease-in delay}
+		
+		//.modal{transition: opacity 0.3s ease-in 0.3s, visibility 0.1s ease-in 0s, max-height 0.01s 0s}
+	}
+
 }
-
-
-/**
- * ==============================
- * ie
- * ==============================
- */
-.ie{} 
-
-.lt-ie9{}

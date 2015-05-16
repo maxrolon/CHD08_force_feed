@@ -2,6 +2,8 @@
 	"name": "js-dependecies",
 	"version": "0.1",
 	"dependencies": {
-		"gsap":"latest"
+		"jquery":"1.11.1",
+		"gsap":"latest",
+		"rangeslider.js":"1.2.1"
 	 }
 }

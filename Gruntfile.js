@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			},
 			scaffold: {			 
 				files: {													
-					'assets/css/main.css':'src/sass/styles.scss'
+					'public/assets/css/main.css':'src/sass/styles.scss'
 				}
 			}
 		 },
@@ -21,8 +21,8 @@ module.exports = function(grunt) {
 				map: true
 			},
 			scaffold: {
-				src: 'assets/css/main.css',
-				dest: 'assets/css/main.css'
+				src: 'public/assets/css/main.css',
+				dest: 'public/assets/css/main.css'
 			}
 		},
 
@@ -34,13 +34,13 @@ module.exports = function(grunt) {
 				preBundleCB: function(b) {
 					b.plugin('minifyify', {
 					 map: 'main.js.map',
-					 output: 'assets/js/main.js.map',
+					 output: 'public/assets/js/main.js.map',
 				 });
 				}
 			},
 			main: {
 				src: ['src/js/app.js'],
-				dest: 'assets/js/main.js',
+				dest: 'public/assets/js/main.js',
 			}
 		},
 		
@@ -48,13 +48,10 @@ module.exports = function(grunt) {
 			compress: {
 				files: {
 					'public/assets/js/vendor.js': [
-						'src/js/vendor/flickity/dist/flickity.pkgd.min.js',
+						'src/js/vendor/jquery/dist/jquery.min.js',
 						'src/js/vendor/gsap/src/minified/TweenMax.min.js',
-						'src/js/vendor/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js',
-						'src/js/vendor/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
-						'src/js/vendor/js-cookie-master/src/js.cookie.js',
-						'src/js/vendor/debounce/debounce.js',
-						'src/js/vendor/fastclick/lib/fastclick.js'
+						'src/js/vendor/rangeslider.js/dist/rangeslider.min.js',
+						'src/js/vendor/debounce/debounce.js'
 					]
 				},
 				options: {
@@ -69,7 +66,7 @@ module.exports = function(grunt) {
 			},
 			resized: {
 				files: [
-					{'assets/img/sprite-sm.png': 'assets/img/sprite.png'}
+					{'public/assets/img/sprite-sm.png': 'public/assets/img/sprite.png'}
 				]
 			},
 		},
@@ -79,7 +76,7 @@ module.exports = function(grunt) {
 				engine: 'pngsmith',
 				algorithm: 'binary-tree',
 				src: 'src/sprite/*.png',
-				destImg: 'assets/img/sprite.png',
+				destImg: 'public/assets/img/sprite.png',
 				imgPath: '/assets/img/sprite.png',
 				cssTemplate: 'src/templates/sprite/sprite.handlebars',
 				destCSS: 'src/sass/partials/_sprite.scss',
@@ -100,7 +97,7 @@ module.exports = function(grunt) {
 					livereload: true,
 					spawn: false
 				},
-				files: ['assets/css/*.css'],
+				files: ['public/assets/css/*.css'],
 				tasks: ['autoprefixer']
 			},
 			sprite: {
@@ -114,7 +111,7 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				},
-				files: ['assets/img/sprite.png'],
+				files: ['public/assets/img/sprite.png'],
 				tasks: ['image_resize']
 			},
 			browserify: {
