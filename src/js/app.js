@@ -1,8 +1,8 @@
 var w = window;
 var FF = w.FF = {};
 
-FF.debug = true;
-FF.useMock = true;
+FF.debug = false;
+FF.useMock = false;
 
 FF.mockData = {
 	tnum: 1,

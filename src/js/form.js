@@ -82,6 +82,8 @@
 				this.data['tnum'] = 4;
 			}
 			
+			this.data['tnum'] = 1;
+			
 			window.FF.template = this.data['tnum'];
 		},
 		
