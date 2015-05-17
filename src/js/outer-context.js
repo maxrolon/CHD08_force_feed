@@ -29,7 +29,6 @@
 				return;
 			}
 			var event = window.FF.visible ? 'ex-hide' : 'ex-show';
-			window.FF.visible = window.FF.visible ? false : true;
 			$('body').trigger(event);
 		}
 	};

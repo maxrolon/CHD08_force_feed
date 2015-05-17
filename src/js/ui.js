@@ -50,16 +50,21 @@
 				}
 			}.bind(this), 100);	
 		},
+		toggle:function(){
+			window.FF.visible = window.FF.visible ? false : true;	
+		},
 		show:function(){
 			if (!this.templateReady){
 				this.wait();
 				return;
 			}
 			if (this.animation.isActive()) return;
+			this.toggle();
 			this.animation.play(0);
 		},
 		hide:function(){
 			if (this.animation.isActive()) return;
+			this.toggle();
 			this.animation.reverse(0);
 		}
 	};

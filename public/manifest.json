@@ -19,7 +19,9 @@
   	"templates/ui.html",
   	"templates/template-a.html",
   	"templates/template-b.html",
-  	"assets/img/logo.png"
+  	"assets/img/logo.png",
+  	"http://chd.dev/assets/img/logo-simple.png",
+  	"http://chd.dev/assets/img/audio.svg"
   ],
   "content_scripts": [
     {

@@ -14,13 +14,13 @@
 		},
 		submit:function(e){
 			e.preventDefault();
-			
 			this.handleRanges();
 			this.getUrl();
 			
 			if (w.FF.debug){
 				$('body').trigger('article-data-ready');
 			} else {
+				$('#FF_UI .loader').show();
 				chrome.runtime.sendMessage({data:this.data});
 			}
 			return false;
@@ -42,12 +42,15 @@
 			if (t && s){
 				this.data['tnum'] = 1;
 			} else if (t && !s){
-				this.data['tnum'] = 2;
+				this.data['tnum'] = 1;
 			} else if (!t && !s){
-				this.data['tnum'] = 3;
+				this.data['tnum'] = 4;
 			} else {
 				this.data['tnum'] = 4;
 			}
+			
+			window.FF.template = this.data['tnum'];
+			this.data['tnum'] = 4;
 		},
 		getUrl:function(){
 			//this.data['url'] = window.location.href;

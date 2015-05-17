@@ -306,10 +306,6 @@
 <!-- <script src="https://ba60722a445e929e3792-222278aea88cddfd56d8690836dddbcb.ssl.cf2.rackcdn.com/js/vendor.js" ></script> -->
 <!-- <script src="https://ba60722a445e929e3792-222278aea88cddfd56d8690836dddbcb.ssl.cf2.rackcdn.com/js/main.js" ></script> -->
 
-<!--
-<script src="assets/js/vendor.js" ></script>
-<script src="assets/js/main.js" ></script>
--->
 
 	</body>
 </html>

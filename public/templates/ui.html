@@ -1,13 +1,18 @@
 <div id="FF_UI">
 	<form action="ui.html" method="post">
 		<label for="time">How much time do you have?</label>
-		<div class="range-container">
+		<div class="range-container more-margin">
 			<input type="range" min="1" max="1000" step="1" value="1" name="time">
+			<span class="yes">No Time</span>
+			<span class="no">Really no time</span>
 		</div>
-		<label for="time">Do much do you care about this topic?</label>
+		<label for="time">How much do you care about this topic?</label>
 		<div class="range-container">
 			<input type="range" min="1" max="1000" ste="1" value="1" name="seriousness">
 		</div>
-		<input type="submit" value="Force Feed Me">
+		<div class="submit-wrapper">
+			<input type="submit" value="Force Feed Me">
+			<img class="loader" src="http://chd.dev/assets/img/audio.svg">
+		</div>
 	</form>
 </div>

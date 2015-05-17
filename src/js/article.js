@@ -16,6 +16,8 @@
 			}
 		},
 		prepare:function(e,d){
+			$('#FF_UI .loader').hide();
+			
 			if (this.$active){
 				this.$active.remove();
 				this.$active = false;
@@ -58,17 +60,37 @@
 				var a = this.data.content[p];
 				if (a.type == 'text'){
 				  var $p = $('<p>');
-				  $content.append($p.html(a.content));
-			   	} else if (a.type == 'image'){
-				  var $i = $('<img>').attr('src',a.content);
+				  //$content.append($p.html(a.content));
+				} else if (a.type == 'image'){
+				  var $i = $('<div class="image-gif">').css({
+					'backgroundImage':'url('+a.content+')'
+				  });
 				  $content.append($i);
 				}
 		   }
 		
+		   
+		   $img = $content.find('.image-gif')
+		   
+		   var self = this;
+		   
+		   	setTimeout(function(){
+				  var i = 0;
+				  self.timer = setInterval(function(){
+					   $img.eq(i).show();
+					   i++;
+					   if (!$img.eq(i)){
+						 $img.not(':first-child').hide();  
+						 i = 0;
+					   }
+				   },200);
+			},2000) 
+		   
 		   this.events('secondary');
 		},
 		remove:function(){
 			this.$active.remove();
+			$('body').trigger('ex-hide');
 		}
 	};
 	
