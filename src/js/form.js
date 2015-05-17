@@ -73,16 +73,12 @@
 				s = values['seriousness'];
 			
 			if (!t && s){
-				console.dir('time and serious');
 				this.data['tnum'] = 1;
 			} else if (!t && !s){
-				console.dir('time and no serious');
 				this.data['tnum'] = 2;
 			} else if (t && !s){
-				console.dir('no time and no serious');
 				this.data['tnum'] = 3;
 			} else {
-				console.dir('no time and serious');
 				this.data['tnum'] = 4;
 			}
 			

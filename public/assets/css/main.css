@@ -157,7 +157,7 @@ html, body {
 
 #FF_UI {
   width: 50%;
-  max-width: 400px;
+  max-width: 500px;
   height: 100%;
   background: #000;
   color: #f87849;
@@ -168,15 +168,18 @@ html, body {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   padding: 80px 30px 0;
-  -webkit-transform: translateX(400px);
-      -ms-transform: translateX(400px);
-          transform: translateX(400px); }
-  #FF_UI label, #FF_UI li, #FF_UI span {
+  -webkit-transform: translateX(500px);
+      -ms-transform: translateX(500px);
+          transform: translateX(500px); }
+  #FF_UI label {
+    color: #fff !important; }
+  #FF_UI li, #FF_UI span {
     color: #f87849 !important; }
   #FF_UI label {
     color: #fff; }
   #FF_UI .range-container {
-    max-width: 300px; }
+    max-width: 400px;
+    margin-bottom: 45px; }
   #FF_UI .more-margin {
     margin-bottom: 45px; }
   #FF_UI .rangeslider {
@@ -192,7 +195,7 @@ html, body {
     float: right; }
   #FF_UI [type="submit"] {
     margin-top: 30px;
-    padding: 3px;
+    padding: 3px 10px;
     background: #f87849 !important;
     color: #fff !important; }
     #FF_UI [type="submit"]:hover {
@@ -204,7 +207,7 @@ html, body {
     display: none;
     position: absolute;
     top: 30px;
-    right: 158px;
+    right: 250px;
     width: 30px;
     height: 30px; }
     #FF_UI .loader.active {

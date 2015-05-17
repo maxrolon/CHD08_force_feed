@@ -127,12 +127,12 @@
 				//Handle images
 				} else if (obj.type == 'image'){
 					var 
-						rand = Math.random() * w.FF.spareImages.length,
+						rand = Math.floor(Math.random() * 12),
 						imgUrl = obj.content.length ? obj.content : w.FF.spareImages[rand],
 						img = '<img class="FF-image-'+imgI+'" src="'+imgUrl+'">',
 						div = '<div class="FF-image-'+imgI+'" style="background-image:url('+imgUrl+')">',
 						$el = $(div);
-					
+						
 					$(img).on('load',this.imageLoaded.bind(this,$el));
 					$(img).on('error',this.imageError.bind(this,$el));
 					
