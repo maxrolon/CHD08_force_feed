@@ -1,6 +1,7 @@
 <div id="FF_UI">
 	<div class="logo"></div>
 	<form action="ui.html" method="post">
+		<label for="time">Got time?</label>
 		<div class="switch-container">
 			<ul>
 				<li class="yes">No Time</li>
@@ -11,15 +12,14 @@
 				<li class="no">REALLY No Time</li>
 			</ul>
 		</div>
-		<div class="care-conatiner">
-			<ul>
-				<li class="yes">Easy to understand</li>
-				<li class="switch">
-					<input id='toggle' class='cmn-toggle cmn-toggle-round-flat' type='checkbox'>
-					<label for='toggle'>
-				</li>
-				<li class="no">SO easy to understand</li>
-			</ul>
+<!-- 		<div class="range-container more-margin">
+			<input type="range" min="1" max="1000" step="1" value="1" name="time">
+			<span class="yes">No Time</span>
+			<span class="no">Really no time</span>
+		</div> -->
+		<label for="time">How much do you care about this topic?</label>
+		<div class="range-container">
+			<input type="range" min="1" max="1000" ste="1" value="1" name="seriousness">
 		</div>
 		<div class="submit-wrapper">
 			<input type="submit" value="Force Feed Me">

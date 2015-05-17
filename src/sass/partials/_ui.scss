@@ -21,21 +21,16 @@ html,body{
 		color:$orange;
 	}
 
-	h3 {
+	label{
 		color:#fff;
-		text-align: center;
-		padding:$padding-1;
-		letter-spacing:0.1em;
 	}
 	
 	.logo {
-		height:40px;
-		background:#fff url("http://files.maxrolon.com/FF/logo-simple.png") no-repeat center;
+		background-image:url("http://files.maxrolon.com/FF/logo-simple.png") no-repeat;
 	}
 	.switch-container {
 		position: relative;
 		li {
-			font-size: $font-size-span-2;
 			display:inline-block;
 		}
 	}
