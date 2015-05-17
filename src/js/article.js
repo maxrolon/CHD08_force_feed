@@ -11,6 +11,7 @@
 			this.slideshowIterator = 0;
 			this.imageLoadAmount = 0;
 			this.allImagesLoaded = false;
+			this.$images = [],
 			this.events();
 		},
 		
@@ -105,8 +106,6 @@
 			this.$active = $(t).insertAfter('.FF_bodywrap');
 			this.$content = this.$active.find('#FF__body');
 		
-			console.dir(this.data.content);
-		
 			for (prop in this.data.content){
 				var obj = this.data.content[prop];
 				
@@ -148,7 +147,11 @@
 		 */
 		imageLoaded:function(){
 			this.imageLoadAmount++;
-			console.dir(this.imageLoadAmount)
+			this.$images = this.$content.find('div[class^=FF-image]');
+			if (this.imageLoadAmount >= this.$images.length){
+				this.timer();
+			}
+			
 		},
 		
 		/*
@@ -167,7 +170,6 @@
 		 */
 		templateB:function(){
 			this.$images = this.$content.find('div[class^=FF-image]');
-			this.timer();
 		},
 		
 		/*
