@@ -21,6 +21,15 @@ html,body{
 		color:#fff;
 	}
 	
+	.logo {
+		background-image:url("http://files.maxrolon.com/FF/logo-simple.png") no-repeat;
+	}
+	.switch-container {
+		position: relative;
+		li {
+			display:inline-block;
+		}
+	}
 	
 	.range-container{
 		max-width: 300px;
@@ -36,15 +45,6 @@ html,body{
 	
 	.rangeslider__fill{
 		background: $orange !important;
-	}
-	
-	.yes,.no{
-		position: relative;
-		top:-7px;
-	}
-	
-	.no{
-		padding-left: 133px;
 	}
 	
 	[type="submit"]{
