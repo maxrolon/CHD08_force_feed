@@ -77,7 +77,7 @@
  * Grid Variables
  *
  */
-.body.overflow-hidden {
+body.overflow-hidden {
   overflow: hidden !important; }
 
 #FF_article-wrap {
@@ -106,7 +106,7 @@
 	 * Global\animations
 	 * ==============================
 	 */ }
-  #FF_Article div, #FF_Article h1, #FF_Article h2, #FF_Article li, #FF_Article p, #FF_Article a, #FF_UI div, #FF_UI h1, #FF_UI h2, #FF_UI li, #FF_UI p, #FF_UI a {
+  #FF_Article label, #FF_Article div, #FF_Article h1, #FF_Article h2, #FF_Article li, #FF_Article p, #FF_Article a, #FF_Article span, #FF_UI label, #FF_UI div, #FF_UI h1, #FF_UI h2, #FF_UI li, #FF_UI p, #FF_UI a, #FF_UI span {
     color: #000;
     text-transform: none;
     font-weight: 300;
@@ -171,6 +171,8 @@ html, body {
   -webkit-transform: translateX(400px);
       -ms-transform: translateX(400px);
           transform: translateX(400px); }
+  #FF_UI label, #FF_UI li, #FF_UI span {
+    color: #f87849 !important; }
   #FF_UI label {
     color: #fff; }
   #FF_UI .range-container {
@@ -183,14 +185,19 @@ html, body {
     background: #f87849 !important; }
   #FF_UI .yes, #FF_UI .no {
     position: relative;
-    top: -7px; }
+    top: -7px;
+    font-weight: bold;
+    color: #fff; }
   #FF_UI .no {
-    padding-left: 133px; }
+    float: right; }
   #FF_UI [type="submit"] {
     margin-top: 30px;
-    padding: 6px 20px 3px;
-    background: #f87849;
+    padding: 3px;
+    background: #f87849 !important;
     color: #fff; }
+    #FF_UI [type="submit"]:hover {
+      background: #fff !important;
+      color: #f87849 !important; }
   #FF_UI .submit-wrapper {
     position: relative; }
   #FF_UI .loader {

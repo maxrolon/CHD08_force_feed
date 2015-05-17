@@ -50,12 +50,17 @@
 		ajax:function(data){
 			console.log('XHR started');
 			
-			var xmlhttp = this.xmlhttp = new XMLHttpRequest();
+			try{
+				var xmlhttp = this.xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("POST", "http://damp-island-2050.herokuapp.com/post/");
+				xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+				xmlhttp.send(JSON.stringify(data));
+				xmlhttp.onreadystatechange = this.ajaxHandler.bind(this);
+			} catch (e) {
+				// statements to handle any exceptions
+				this.sendMessage('error','Exception: Server Error');
+			}
 			
-			xmlhttp.open("POST", "http://damp-island-2050.herokuapp.com/post/");
-			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-			xmlhttp.send(JSON.stringify(data));
-			xmlhttp.onreadystatechange = this.ajaxHandler.bind(this);
 		},
 		
 		/* Handler: Ajax State change
@@ -69,9 +74,11 @@
 				if (this.xmlhttp.status = 200){
 					this.sendMessage('article',this.xmlhttp.responseText);
 				} else if (this.xmlhttp.status = 500){
-					this.sendMessage('error','Server Error');
+					this.sendMessage('error','Server Error 500');
 				} else if (this.xmlhttp.status = 404){
-					this.sendMessage('error','404 Error');
+					this.sendMessage('error','Server Error 404');
+				} else if (this.xmlhttp.status = 503){
+					this.sendMessage('error','Server Error 503');
 				}
 			}
 		},
@@ -81,10 +88,14 @@
 		 * @returns void
 		 */
 		sendMessage:function(key,value){
-			var message = {};
-			message[key] = value;
-			
-			chrome.tabs.sendMessage(this.tabId,message);
+			try{
+				var message = {};
+				message[key] = value;
+				chrome.tabs.sendMessage(this.tabId,message);
+			} catch (e) {
+				// statements to handle any exceptions
+				chrome.tabs.sendMessage(this.tabId,{Exception: 'Server Error'});
+			}
 		}
 	}
 	

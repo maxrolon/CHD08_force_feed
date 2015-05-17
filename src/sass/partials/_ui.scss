@@ -17,10 +17,10 @@ html,body{
 	padding: 80px 30px 0;
 	transform:translateX(400px);
 	
-	label,li{
-		color:$orange;
-	}
-
+	label,li,span{
+		color:$orange !important;
+	} 
+	
 	label{
 		color:#fff;
 	}
@@ -45,17 +45,25 @@ html,body{
 	.yes,.no{
 		position: relative;
 		top:-7px;
+		font-weight: bold;
+		color: #fff;
+		
 	}
 	
 	.no{
-		padding-left: 133px;
+		float: right;
 	}
 	
 	[type="submit"]{
 		margin-top: 30px;
-		padding: 6px 20px 3px;
-		background:$orange;
-		color:#fff;
+		padding: 3px;
+		background:$orange !important;;
+		color:#fff !important;;
+	
+		&:hover{
+			background:#fff !important;
+			color:$orange !important;
+		}
 	}
 	
 	.submit-wrapper{

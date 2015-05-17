@@ -58,6 +58,8 @@
 			//End of XHR
 			} else if (request.article){
 				$('body').trigger('article-data-ready',[request.article]);
+			} else if (request.error){
+				console.dir(request.error);
 			}
 		}
 	};

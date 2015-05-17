@@ -52,11 +52,18 @@
 			if (w.FF.useMock){
 				this.data = w.FF.mockResponse
 			} else {
-				this.data = JSON.parse(d);
+				try{
+					this.data = JSON.parse(d);
+				} catch(e) {
+					this.data = w.FF.mockResponse;
+					alert(e); //error in the above string(in this case,yes)!
+				}
 			}
 			
 			//Decide which template variant to use
-			this.type = t = Number(this.data.template) <= 2 ? 'a' : 'b';
+			this.type = t = Number(window.FF.template) <= 2 ? 'a' : 'b';
+			
+			console.dir('type = '+this.type)
 			
 			//If we have already fetched the template file..
 			if (this['template_'+t]){

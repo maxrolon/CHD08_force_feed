@@ -1,4 +1,4 @@
-.body.overflow-hidden{
+body.overflow-hidden{
 	overflow: hidden !important;
 }
 
@@ -16,12 +16,14 @@
 #FF_Article,
 #FF_UI{
 	
+	label,
 	div,
 	h1, 
 	h2, 
 	li, 
 	p, 
-	a{
+	a,
+	span{
 		color:$text-color;
 		text-transform: none;
 		font-weight: 300;
