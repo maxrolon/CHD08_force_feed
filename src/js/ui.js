@@ -39,7 +39,7 @@
 			this.animation = 
 			new TimelineMax()
 			.pause()
-			.to(this.$template, 2,{x:0,ease: Bounce.easeOut});
+			.to(this.$template, 1,{x:0});
 				
 		},
 		wait:function(){
@@ -65,7 +65,7 @@
 		hide:function(){
 			if (this.animation.isActive()) return;
 			this.toggle();
-			this.animation.timeScale(0.7).reverse(0);
+			this.animation.timeScale(1.4).reverse(0);
 		}
 	};
 	

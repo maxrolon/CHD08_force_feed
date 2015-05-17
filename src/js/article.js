@@ -97,6 +97,8 @@
 		 * @returns	void
 		 */
 		render:function(){
+			$('body').addClass('overflow-hidden');
+			
 			//Reset necessary iterators etc
 			var imgI = 1;
 			this.imageLoadAmount = 0;
@@ -122,9 +124,9 @@
 						div = '<div class="FF-image-'+imgI+'" style="background-image:url('+obj.content+')">',
 						$el = $(div);
 					
-					$(img).on('load',this.imageLoaded.bind(this));
+					$(img).on('load',this.imageLoaded.bind(this,$el));
 					
-					this.$content.append(div);
+					this.$content.append($el);
 					
 					imgI++;
 				}
@@ -146,13 +148,17 @@
 		 * Register how many images have loaded
 		 * to the page
 		 */
-		imageLoaded:function(){
-			this.imageLoadAmount++;
-			this.$images = this.$content.find('div[class^=FF-image]');
-			if (this.imageLoadAmount >= this.$images.length){
-				this.setTimer();
+		imageLoaded:function($el){
+			if (this.type == 'a'){
+				console.dir($el);
+				$el.addClass('visible');
+			} else {
+				this.imageLoadAmount++;
+				this.$images = this.$content.find('div[class^=FF-image]');
+				if (this.imageLoadAmount >= this.$images.length){
+					this.setTimer();
+				}
 			}
-			
 		},
 		
 		/*
@@ -211,6 +217,7 @@
 		 * @returns	void
 		 */
 		remove:function(){
+			$('body').removeClass('overflow-hidden');
 			this.clearTimer();
 			this.$active.remove();
 		}

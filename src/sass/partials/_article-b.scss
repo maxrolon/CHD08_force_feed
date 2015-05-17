@@ -1,3 +1,22 @@
 #FF_Article.template-b{
-	color:gold;
+	
+	p{display: none}
+
+	#FF__body{
+		position: relative;
+		margin-bottom: 50px;
+	}
+	
+	div[class^="FF-image"]{
+		margin: 0;
+		opacity:0;
+		
+		&.visible{opacity:1}
+	}
+	
+	div[class^="FF-image"]:not(:last-child){
+		position: absolute;
+		top:0;
+		
+	}
 }
