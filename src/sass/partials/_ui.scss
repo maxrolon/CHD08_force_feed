@@ -16,6 +16,10 @@ html,body{
 	box-sizing: border-box;
 	padding: 80px 30px 0;
 	transform:translateX(400px);
+	
+	label,li{
+		color:$orange;
+	}
 
 	h3 {
 		color:#fff;
