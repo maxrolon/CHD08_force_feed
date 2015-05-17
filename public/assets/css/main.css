@@ -173,12 +173,6 @@ html, body {
           transform: translateX(400px); }
   #FF_UI label {
     color: #fff; }
-  #FF_UI .logo {
-    background-image: url("http://files.maxrolon.com/FF/logo-simple.png") no-repeat; }
-  #FF_UI .switch-container {
-    position: relative; }
-    #FF_UI .switch-container li {
-      display: inline-block; }
   #FF_UI .range-container {
     max-width: 300px; }
   #FF_UI .more-margin {
@@ -187,6 +181,11 @@ html, body {
     margin: 15px 0 30px; }
   #FF_UI .rangeslider__fill {
     background: #f87849 !important; }
+  #FF_UI .yes, #FF_UI .no {
+    position: relative;
+    top: -7px; }
+  #FF_UI .no {
+    padding-left: 133px; }
   #FF_UI [type="submit"] {
     margin-top: 30px;
     padding: 6px 20px 3px;
@@ -262,52 +261,6 @@ html, body {
 
 input[type="range"]:focus + .rangeslider .rangeslider__handle {
   box-shadow: 0 0 8px rgba(255, 0, 255, 0.9); }
-
-/* original from http://callmenick.com/post/css-toggle-switch-examples*/
-.cmn-toggle {
-  position: absolute;
-  margin-left: -9999px;
-  visibility: hidden; }
-  .cmn-toggle + label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none; }
-
-input.cmn-toggle-round-flat + label {
-  padding: 2px;
-  width: 80px;
-  height: 30px;
-  background-color: #dddddd;
-  border-radius: 60px;
-  transition: background 0.4s; }
-  input.cmn-toggle-round-flat + label:before, input.cmn-toggle-round-flat + label:after {
-    display: block;
-    position: absolute;
-    content: ""; }
-  input.cmn-toggle-round-flat + label:before {
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    right: 2px;
-    background-color: #fff;
-    border-radius: 20px;
-    transition: background 0.4s; }
-  input.cmn-toggle-round-flat + label:after {
-    top: 4px;
-    left: 4px;
-    bottom: 4px;
-    width: 40px;
-    background-color: #f87849;
-    border-radius: 40px;
-    transition: background 0.4s; }
-
-input.cmn-toggle-round-flat:checked + label:after {
-  margin-left: 35px; }
 
 #FF_Article {
   font-size: 18px;
