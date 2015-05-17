@@ -160,7 +160,7 @@
 		 */
 		imageError:function($el){
 			var 
-				rand = Math.random() * w.FF.spareImages.length,
+				rand = Math.floor(Math.random() * 12),
 				imgUrl = w.FF.spareImages[rand];
 			
 			if (this.type == 'a'){

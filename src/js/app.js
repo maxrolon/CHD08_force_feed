@@ -18,12 +18,13 @@ FF.spareImages = [
 	"http://www2.pictures.zimbio.com/gi/Record%252BHeat%252BWave%252BExacerbates%252BDevastating%252BDrought%252BWVjNzNteiS4l.jpg",
 	"http://rlv.zcache.com/nasa_mars_rave_vallis_poster-rbe27566bffaf49e3a6544cdb2789eccd_w2u_8byvr_324.jpg",
 	"http://mnbrighterideas.com/skin/images/heatPump/ASHP_ani_cool.gif",
-	"http://mnbrighterideas.com/skin/images/heatPump/ASHP_ani_cool.gif",
 	"http://www.fullfleet.com/fullpages/nestlewatersmap.gif",
 	"https://d15mj6e6qmt1na.cloudfront.net/i/8331223/600.jpg",
 	"http://www.fullfleet.com/fullpages/nestlewatersmap.gif",
 	"http://www.hydrology.nl/images/docs/iah/cartoons/07_gw_buffer.jpg",
-	"http://www.vosizneias.com/wp-content/uploads/2010/03/6.JPG"
+	"http://www.vosizneias.com/wp-content/uploads/2010/03/6.JPG",
+	"https://www.insideindianabusiness.com/images/news/scenes/NestlePureLifeWater.jpg",
+	"http://media.glassdoor.com/l/b0/13/5b/19/corporate-conference-room.jpg"
 ]
 
 
