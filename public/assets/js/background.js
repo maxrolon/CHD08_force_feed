@@ -52,7 +52,7 @@
 			
 			var xmlhttp = this.xmlhttp = new XMLHttpRequest();
 			
-			xmlhttp.open("POST", "http://maxrolon.com:9000/post/");
+			xmlhttp.open("POST", "http://damp-island-2050.herokuapp.com/post/");
 			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			xmlhttp.send(JSON.stringify(data));
 			xmlhttp.onreadystatechange = this.ajaxHandler.bind(this);

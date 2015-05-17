@@ -39,6 +39,7 @@
 		 * @returns void
 		 */
 		renderStart:function(e,d){
+			$('body').trigger('ex-hide');
 			$('#FF_UI .loader').hide();
 			
 			// Is there a template on the page already?
@@ -149,7 +150,7 @@
 			this.imageLoadAmount++;
 			this.$images = this.$content.find('div[class^=FF-image]');
 			if (this.imageLoadAmount >= this.$images.length){
-				this.timer();
+				this.setTimer();
 			}
 			
 		},
@@ -178,14 +179,29 @@
 		 */
 		slideshow:function(){
 			this.$images.eq(this.slideshowIterator).addClass('visible')
+			
+			//Allows it to go infinitely
+			if (this.slideshowIterator >= this.$images.length){
+				this.$images.not(':first-child').removeClass('visible');
+				this.slideshowIterator = 0;
+				return;
+			}
+			
 			this.slideshowIterator++;
 		},
 		
 		/*
 		 * Lovely ol' timer
 		 */
-		timer: function(){
-			setInterval(this.slideshow.bind(this),200)
+		setTimer: function(){
+			this.timer = setInterval(this.slideshow.bind(this),200)
+		},
+		
+		/*
+		 * Lovely ol' timer
+		 */
+		clearTimer: function(){
+			clearInterval(this.timer);
 		},
 		
 		/*
@@ -195,8 +211,8 @@
 		 * @returns	void
 		 */
 		remove:function(){
+			this.clearTimer();
 			this.$active.remove();
-			$('body').trigger('ex-hide');
 		}
 	};
 	
