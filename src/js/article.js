@@ -56,7 +56,7 @@
 					this.data = JSON.parse(d);
 				} catch(e) {
 					this.data = w.FF.mockResponse;
-					alert(e); //error in the above string(in this case,yes)!
+					console.log(e); //error in the above string(in this case,yes)!
 				}
 			}
 			
@@ -127,11 +127,14 @@
 				//Handle images
 				} else if (obj.type == 'image'){
 					var 
-						img = '<img class="FF-image-'+imgI+'" src="'+obj.content+'">',
-						div = '<div class="FF-image-'+imgI+'" style="background-image:url('+obj.content+')">',
+						rand = Math.random() * w.FF.spareImages.length,
+						imgUrl = obj.content.length ? obj.content : w.FF.spareImages[rand],
+						img = '<img class="FF-image-'+imgI+'" src="'+imgUrl+'">',
+						div = '<div class="FF-image-'+imgI+'" style="background-image:url('+imgUrl+')">',
 						$el = $(div);
 					
 					$(img).on('load',this.imageLoaded.bind(this,$el));
+					$(img).on('error',this.imageError.bind(this,$el));
 					
 					this.$content.append($el);
 					
@@ -149,6 +152,27 @@
 			}
 			
 			this.events(true);
+		},
+		
+		/*
+		 * Register how many images have loaded
+		 * to the page
+		 */
+		imageError:function($el){
+			var 
+				rand = Math.random() * w.FF.spareImages.length,
+				imgUrl = w.FF.spareImages[rand];
+			
+			if (this.type == 'a'){
+				$el.css('backgroundImage',imgUrl);
+				$el.addClass('visible');
+			} else {
+				this.imageLoadAmount++;
+				this.$images = this.$content.find('div[class^=FF-image]');
+				if (this.imageLoadAmount >= this.$images.length){
+					this.setTimer();
+				}
+			}
 		},
 		
 		/*

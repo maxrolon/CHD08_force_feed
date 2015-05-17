@@ -25,8 +25,9 @@
 		"templates/template-a.html",
 		"templates/template-b.html",
 		"assets/img/logo.png",
-		"http://chd.dev/assets/img/logo-simple.png",
-		"http://chd.dev/assets/img/audio.svg"
+		"http://files.maxrolon.com/FF/logo-simple.png",
+		"http://samherbert.net/svg-loaders/svg-loaders/audio.svg",
+		"http://samherbert.net/svg-loaders/svg-loaders/spinning-circles.svg"
 	],
 	"content_scripts": [
 		{
