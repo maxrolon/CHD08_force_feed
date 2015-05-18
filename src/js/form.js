@@ -72,14 +72,14 @@
 				t = values['time'],
 				s = values['seriousness'];
 			
-			if (!t && s){
-				this.data['tnum'] = 1;
-			} else if (!t && !s){
-				this.data['tnum'] = 2;
-			} else if (t && !s){
+			if (t && !s){
 				this.data['tnum'] = 3;
-			} else {
+			} else if (t && s){
 				this.data['tnum'] = 4;
+			} else if (!t && s){
+				this.data['tnum'] = 2;
+			} else {
+				this.data['tnum'] = 1;
 			}
 			
 			window.FF.template = this.data['tnum'];
